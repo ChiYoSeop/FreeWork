@@ -1,0 +1,21 @@
+#Problem03
+#2018047283_지요섭
+#3-1: 'numbers.txt'파일을 읽기 모드로 열기
+f = open("numbers.txt", 'r', encoding='UTF8')
+f.close()
+# #3-2: 파일의 내용을 한줄씩 읽어들여
+# def check_pos_integer():
+def check_pos_integer(a):
+    f = open(a, "r", encoding='UTF8')
+    for _ in range(10):
+        l = f.readline()
+        try:
+            b = int(l)
+            print(b)
+
+        except:
+            c = l.rstrip()
+            print("Error : invalid literal for int() with base 10: '{}'".format(c))
+    return ''
+a = "numbers.txt"
+print(check_pos_integer(a))
